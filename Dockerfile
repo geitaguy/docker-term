@@ -15,7 +15,7 @@ ENV STARTUP_APP ${ROOTDIR}/${STARTUP_SCRIPT}
 WORKDIR ${ROOTDIR}
 COPY root/${STARTUP_SCRIPT} .
 
-RUN apt-get update && apt-get install -y apt-utils telnetd xinetd && mkdir -p /app
+RUN apt-get update && apt-get install -y apt-utils telnetd xinetd && apt-get -qqy autoremove && apt-get -qqy clean  && rm -rf /var/lib/apt/lists/* && mkdir -p /app
 
 #set up SSH access
 #note - the sshd_config prevents users from accessing the container via sftp.
