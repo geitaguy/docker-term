@@ -10,7 +10,7 @@ fi
 if ["$SESSION_TYPE" -ne "remote/ssh"]; then
     exit
 else
-    ./login-app.sh
+    ./login.sh
     exit
 fi
 

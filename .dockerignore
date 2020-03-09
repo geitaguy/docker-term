@@ -1,0 +1,7 @@
+app/nodejs/node_modules/*
+app/dotnetcore/bin/*
+app/dotnetcore/obj/*
+readme.md
+runcontainer.*
+runinteractive.bat
+*.png
