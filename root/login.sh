@@ -10,7 +10,7 @@ if [ -f ${APPDIR}/app.sh ]; then
   exitcode=$?
 else
   echo "Cannot find ${APPDIR}/app.sh"
-  read -p "Press <enter> to continue"
+  read -p "Press <enter> to continue" ignoreinput
   exitcode=1
 fi
 
@@ -23,6 +23,6 @@ if [ ${exitcode} = 0 ]; then
   exit 0
 else
   echo "Program completed with exit code ${exitcode}"
-  read -p "Press <enter> to exit"
+  read -p "Press <enter> to exit" ignoreinput
   exit ${exitcode}
 fi
